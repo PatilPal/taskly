@@ -31,6 +31,7 @@ dist/
 build/
 
 # Virtual environments
+taskly_env/
 venv/
 env/
 *.venv
