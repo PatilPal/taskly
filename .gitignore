@@ -1,0 +1,66 @@
+# -------------------------
+# Logs
+# -------------------------
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# -------------------------
+# Node.js (Frontend)
+# -------------------------
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# -------------------------
+# Python (Backend)
+# -------------------------
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Virtual environments
+venv/
+env/
+*.venv
+*.env
+
+# Django specific
+*.pot
+*.db
+*.sqlite3
+media/
+staticfiles/
+static/
+local_settings.py
+
+# -------------------------
+# Editors / IDE
+# -------------------------
+.vscode/
+!.vscode/extensions.json   # Allow recommended extensions
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.swp
+*.swo
+
+# -------------------------
+# OS files
+# -------------------------
+.DS_Store
+Thumbs.db
