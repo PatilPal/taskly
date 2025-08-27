@@ -1,77 +1,72 @@
-.navbar{
-    padding: 20px 0px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.navbar {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
-.logo{
-    height: 50px;
-    width: 50px;
-    object-fit: contain;
-    margin-left: 20px;
-}
-.navbar-menu{
-    display: flex;
-    list-style: none;
-    gap: 30px;
-    color: #49557e;
-    font-size: 18px;
-    font-weight: bold;
-    
-}
-.navbar-right{
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-.navbar button{
-    background: transparent;
-    color: #49557e;
-    font-size: 16px;
-    border: 1px solid tomato;
-    padding: 10px 30px;
-    border-radius: 50px;
-    cursor: pointer; 
-}
-.navbar button:hover{
-    background: tomato;
-    color: white;
-    transition: all 0.3s ease-in-out;
-}
-.active{
-    padding-bottom: 2px;
-    border-bottom: 2px solid tomato;
-}
-.navbar-menu li {
+.logo {
+  height: 45px;
   cursor: pointer;
 }
 
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
 
+.navbar-menu li {
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  transition: color 0.3s;
+}
 
+.navbar-menu li:hover,
+.navbar-menu .active {
+  color: #6a5acd; /* Lavender brand color */
+  font-weight: 600;
+}
 
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 15px;
-  }
+.navbar-right {
+  display: flex;
+  gap: 15px;
+}
 
-  .navbar-menu {
-    flex-direction: column;
-    gap: 15px;
-    margin-top: 10px;
-  }
+.btn {
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  transition: 0.3s;
+}
 
-  .navbar-right {
-    flex-direction: column;
-    gap: 15px;
-    margin-top: 10px;
-    width: 100%;
-    align-items: flex-start;
-  }
+.btn.login {
+  background: transparent;
+  border: 1px solid #6a5acd;
+  color: #6a5acd;
+}
 
-  .navbar-right button {
-    width: 100%;
-  }
+.btn.login:hover {
+  background: #6a5acd;
+  color: white;
+}
+
+.btn.signup {
+  background: #6a5acd;
+  color: white;
+}
+
+.btn.signup:hover {
+  background: #5848c2;
 }
