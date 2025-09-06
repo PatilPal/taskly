@@ -1,33 +1,29 @@
+// src/components/Footer/Footer.jsx
 import React from "react";
 import "./Footer.css";
+import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
   return (
     <footer className="footer">
-      <div className="footer-top">
-        <h2>Enter your Logo</h2>
-        <div className="links">
-          <ul>
-            <li>Home</li>
-            <li>Services</li>
-            <li>Products</li>
-            <li>About Us</li>
-          </ul>
-          <ul>
-            <li>Privacy Policy</li>
-            <li>Refund Terms</li>
-            <li>FAQ</li>
-            <li>Contact Us</li>
-          </ul>
-        </div>
-        <div className="social">
-          <p>Follow us</p>
-          <div className="icons">[social icons here]</div>
+      <div className="footer-content">
+        <h3 className="logo">Taskly</h3>
+        <nav className="footer-links">
+          <a href="/">Home</a>
+          <a href="/services">Services</a>
+          <a href="/chat">Chat</a>
+          <a href="/about">About</a>
+          <a href="/contact">Contact</a>
+        </nav>
+        <div className="footer-social">
+          <FaFacebook />
+          <FaTwitter />
+          <FaInstagram />
         </div>
       </div>
-      <div className="footer-bottom">
-        <p>© 2022 Girnar Software Pvt. Ltd.</p>
-      </div>
+      <p className="footer-copy">
+        © {new Date().getFullYear()} Taskly. All rights reserved.
+      </p>
     </footer>
   );
 };

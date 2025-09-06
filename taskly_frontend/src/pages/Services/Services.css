@@ -1,0 +1,30 @@
+.services-page {
+  padding: 20px;
+}
+
+.service-category {
+  margin-bottom: 40px;
+}
+
+.service-category h2 {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.service-list {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  scrollbar-width: none; /* Firefox */
+}
+
+.service-list::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+hr{
+    border: none;
+    border-top: 2px solid #eee;
+    width: 100%;
+}

@@ -1,49 +1,45 @@
-import React, { useState } from "react";
+import React from "react";
+import { NavLink } from "react-router-dom";
 import "./Navbar.css";
-import { assets } from "../../assets/assets";
+import assets from "../../assets/logo.png";
 
 const Navbar = () => {
-  const [menu, setMenu] = useState("home");
-
   return (
-    <div className="navbar">
+    <header className="navbar">
       {/* Logo */}
-      <img src={assets.logo} alt="logo" className="logo" />
-
-      {/* Menu Links */}
-      <ul className="navbar-menu">
-        <li
-          onClick={() => setMenu("home")}
-          className={menu === "home" ? "active" : ""}
-        >
-          Home
-        </li>
-        <li
-          onClick={() => setMenu("menu")}
-          className={menu === "menu" ? "active" : ""}
-        >
-          Menu
-        </li>
-        <li
-          onClick={() => setMenu("contact")}
-          className={menu === "contact" ? "active" : ""}
-        >
-          Contact Us
-        </li>
-        <li
-          onClick={() => setMenu("mobile-app")}
-          className={menu === "mobile-app" ? "active" : ""}
-        >
-          Mobile App
-        </li>
-      </ul>
-
-      {/* Right Buttons */}
-      <div className="navbar-right">
-        <button className="btn login">Login</button>
-        <button className="btn signup">Sign Up</button>
+      <div className="logo">
+        <img src={assets} alt="Taskly" />
       </div>
-    </div>
+
+      {/* Navigation Links */}
+      <nav className="nav-links">
+        <NavLink to="/" exact activeClassName="active">
+          Home
+        </NavLink>
+        <NavLink to="/services" activeClassName="active">
+          Services
+        </NavLink>
+        <NavLink to="/chat" activeClassName="active">
+          Chat
+        </NavLink>
+        <NavLink to="/history" activeClassName="active">
+          History
+        </NavLink>
+        <NavLink to="/about" activeClassName="active">
+          About
+        </NavLink>
+        <NavLink to="/provider-signup" activeClassName="active">
+    Become a Provider
+  </NavLink>
+      </nav>
+
+      {/* Register/Login Button */}
+      <div className="nav-auth">
+        <NavLink to="/login" className="login-btn">
+          Register / Login
+        </NavLink>
+      </div>
+    </header>
   );
 };
 
